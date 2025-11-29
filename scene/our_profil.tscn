@@ -1,0 +1,294 @@
+[gd_scene load_steps=18 format=3 uid="uid://bu2vhib7h02x5"]
+
+[ext_resource type="Script" uid="uid://cky261k4aip1b" path="res://script/our_profil.gd" id="1_hilc5"]
+[ext_resource type="Texture2D" uid="uid://5l3exx2h1yfk" path="res://src/img/ourProfil/fotoBersama.jpg" id="2_1edcu"]
+[ext_resource type="Texture2D" uid="uid://wyr1k73rh6lu" path="res://src/img/ui/tombol_X.png" id="3_dnyp7"]
+[ext_resource type="Texture2D" uid="uid://nfkqgunptwkq" path="res://src/img/ourProfil/fotoAfdhal-removebg-preview.png" id="3_irqhh"]
+[ext_resource type="Texture2D" uid="uid://dbgdiu1e60jph" path="res://src/img/ui/tombol_X2.png" id="4_1edcu"]
+[ext_resource type="FontFile" uid="uid://c1d4le37qq52t" path="res://src/font/DeliusUnicase-Bold.ttf" id="4_oh607"]
+[ext_resource type="Texture2D" uid="uid://4isnepun4x5n" path="res://src/img/ourProfil/fotoAlif-removebg-preview.png" id="4_r4bd0"]
+[ext_resource type="Texture2D" uid="uid://77b6dptt8shx" path="res://src/img/ourProfil/fotoCassev-removebg-preview.png" id="5_oh607"]
+[ext_resource type="Texture2D" uid="uid://bx15dhpa523ir" path="res://src/img/ourProfil/Fotoiwan-removebg-preview.png" id="6_bm8lv"]
+[ext_resource type="Texture2D" uid="uid://dcoo51l640x0h" path="res://src/img/ourProfil/fotoFaqih-removebg-preview.png" id="7_rpbmq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ji41a"]
+texture = ExtResource("3_dnyp7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a04mw"]
+texture = ExtResource("4_1edcu")
+
+[sub_resource type="InputEventKey" id="InputEventKey_jkbe5"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_ygga8"]
+events = [SubResource("InputEventKey_jkbe5")]
+
+[sub_resource type="Animation" id="Animation_1edcu"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/CanvasModulate:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/CanvasModulate:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/CanvasModulate:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/CanvasModulate:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_dnyp7"]
+resource_name = "close"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/CanvasModulate:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.083333336, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/CanvasModulate:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.083333336, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/CanvasModulate:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.083333336, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/CanvasModulate:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.083333336, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ji41a"]
+_data = {
+&"RESET": SubResource("Animation_1edcu"),
+&"close": SubResource("Animation_dnyp7")
+}
+
+[node name="OurProfil" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hilc5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="fotoBersama" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1edcu")
+expand_mode = 1
+
+[node name="TextureRect1" type="TextureRect" parent="CanvasLayer"]
+offset_left = 487.0
+offset_top = 306.0
+offset_right = 685.0
+offset_bottom = 666.0
+pivot_offset = Vector2(99, 180)
+texture = ExtResource("3_irqhh")
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect1"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = -29.0
+offset_right = 143.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oh607")
+theme_override_font_sizes/font_size = 23
+text = "AFDHAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+offset_left = 21.0
+offset_top = 263.0
+offset_right = 252.7037
+offset_bottom = 642.0
+pivot_offset = Vector2(115.852, 189)
+texture = ExtResource("4_r4bd0")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect2"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = -30.0
+offset_right = 166.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oh607")
+theme_override_font_sizes/font_size = 23
+text = "ALIF"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer"]
+offset_left = 266.0
+offset_top = 259.0
+offset_right = 477.24503
+offset_bottom = 648.0
+pivot_offset = Vector2(105.623, 194)
+texture = ExtResource("5_oh607")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect3"]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 41.0
+offset_right = 246.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oh607")
+theme_override_font_sizes/font_size = 23
+text = "CASSEV"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer"]
+offset_left = 709.0
+offset_top = 299.0
+offset_right = 915.0
+offset_bottom = 633.0
+pivot_offset = Vector2(103, 167)
+texture = ExtResource("6_bm8lv")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect4"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = -29.0
+offset_right = 143.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oh607")
+theme_override_font_sizes/font_size = 23
+text = "RIDWAN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer"]
+offset_left = 956.0
+offset_top = 295.0
+offset_right = 1146.2347
+offset_bottom = 642.0
+pivot_offset = Vector2(95, 173)
+texture = ExtResource("7_rpbmq")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect5"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = -29.0
+offset_right = 143.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oh607")
+theme_override_font_sizes/font_size = 23
+text = "FAQIH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="close" type="Button" parent="CanvasLayer"]
+offset_left = 1082.0
+offset_right = 1152.0
+offset_bottom = 70.0
+rotation = -6.2831855
+pivot_offset = Vector2(35, 35)
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ji41a")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_ji41a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a04mw")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_a04mw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_a04mw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_a04mw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_a04mw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_a04mw")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_a04mw")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_a04mw")
+theme_override_styles/focus = SubResource("StyleBoxTexture_a04mw")
+shortcut = SubResource("Shortcut_ygga8")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ji41a")
+}
+
+[connection signal="mouse_entered" from="CanvasLayer/TextureRect1" to="." method="_on_texture_rect_1_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/TextureRect1" to="." method="_on_texture_rect_1_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/TextureRect2" to="." method="_on_texture_rect_2_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/TextureRect2" to="." method="_on_texture_rect_2_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/TextureRect3" to="." method="_on_texture_rect_3_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/TextureRect3" to="." method="_on_texture_rect_3_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/TextureRect4" to="." method="_on_texture_rect_4_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/TextureRect4" to="." method="_on_texture_rect_4_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/TextureRect5" to="." method="_on_texture_rect_5_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/TextureRect5" to="." method="_on_texture_rect_5_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer/close" to="." method="_on_close_pressed"]

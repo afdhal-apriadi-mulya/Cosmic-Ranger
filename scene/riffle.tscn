@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://prra6t05j1u4"]
+
+[ext_resource type="Script" uid="uid://b7jy58tdb4pkx" path="res://script/riffle.gd" id="1_cxhk7"]
+[ext_resource type="Texture2D" uid="uid://cd37w18dk5887" path="res://src/img/attibute/Senjata/weaponR1.png" id="2_5qyxg"]
+
+[node name="riffle" type="Node2D"]
+scale = Vector2(0.12, 0.12)
+script = ExtResource("1_cxhk7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -3.8146973e-06)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("2_5qyxg")
+
+[node name="Marker2D" type="Marker2D" parent="Sprite2D"]
+position = Vector2(655.07983, 1.1219698e-05)
+scale = Vector2(2.9411764, 2.9411764)
+
+[node name="posisiPistol" type="Marker2D" parent="Sprite2D"]
+position = Vector2(0, 1.1219699e-05)
+scale = Vector2(2.941177, 2.941177)

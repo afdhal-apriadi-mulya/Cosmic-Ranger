@@ -1,0 +1,145 @@
+[gd_scene load_steps=9 format=3 uid="uid://d28f3bswvna2"]
+
+[ext_resource type="Script" uid="uid://b7kyticfy207a" path="res://script/teks_interaksi.gd" id="1_hqgkv"]
+[ext_resource type="FontFile" uid="uid://c1d4le37qq52t" path="res://src/font/DeliusUnicase-Bold.ttf" id="1_l3212"]
+[ext_resource type="FontFile" uid="uid://daglmw3nvfi7p" path="res://src/font/Pixel Game Font.otf" id="3_kc2qb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kc2qb"]
+bg_color = Color(0.827451, 0.24313726, 0.2627451, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_color = Color(0.9459488, 0.54424244, 0.6815187, 1)
+border_blend = true
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqgkv"]
+bg_color = Color(0.9882353, 0.8745098, 0.6509804, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.78387654, 0.6786235, 0.63809043, 1)
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+shadow_size = 13
+
+[sub_resource type="Animation" id="Animation_hqgkv"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_l3212"]
+resource_name = "opening"
+length = 0.5
+step = 0.01
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer:offset:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2, 0),
+"points": PackedFloat32Array(0, 0, 0, 0.083333336, 0, 0, -0.034747798, 0, 0.048585534, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.20848678, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 2, 0),
+"points": PackedFloat32Array(200, 0, 0, 0.083333336, -38.333336, -40, -0.034747798, 13.899119, 0.048585534, -19.434214, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.20848678, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kc2qb"]
+_data = {
+&"RESET": SubResource("Animation_hqgkv"),
+&"opening": SubResource("Animation_l3212")
+}
+
+[node name="interaksi" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hqgkv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LabelOrang" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 31.0
+offset_top = 374.0
+offset_right = 318.0
+offset_bottom = 448.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kc2qb")
+
+[node name="namaOrang" type="Label" parent="CanvasLayer/LabelOrang"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_kc2qb")
+theme_override_font_sizes/font_size = 65
+text = "JOKO"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_hqgkv")
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("1_l3212")
+theme_override_font_sizes/font_size = 19
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_kc2qb")
+}
+autoplay = "opening"

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dufrjwcnifhft"]
+
+[ext_resource type="Script" uid="uid://d2gaamrmjmsf1" path="res://script/double_pistol.gd" id="1_f48xe"]
+[ext_resource type="Texture2D" uid="uid://dq1olsxr58rtq" path="res://src/img/attibute/Senjata/weaponR2.png" id="2_jvnkn"]
+
+[node name="doublePistol" type="Node2D"]
+script = ExtResource("1_f48xe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_jvnkn")
+
+[node name="Marker2D" type="Marker2D" parent="Sprite2D"]
+position = Vector2(414, 0)
+
+[node name="posisiPistol" type="Marker2D" parent="Sprite2D"]
+position = Vector2(339.99997, 0)

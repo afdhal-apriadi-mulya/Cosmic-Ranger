@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvnl2s3wvqt5"]
+
+[ext_resource type="Script" uid="uid://bw3rfnybe7f41" path="res://script/enemy_spawner.gd" id="1_hgipb"]
+
+[node name="enemy_spawner" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_hgipb")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,579 @@
+[gd_scene load_steps=25 format=3 uid="uid://dv624w1sqtngi"]
+
+[ext_resource type="FontFile" uid="uid://daglmw3nvfi7p" path="res://src/font/Pixel Game Font.otf" id="1_24njt"]
+[ext_resource type="Script" uid="uid://c2hcx381vsdy2" path="res://script/store.gd" id="1_myxlr"]
+[ext_resource type="Texture2D" uid="uid://bkhqg6kkeay8s" path="res://src/img/ui/ikon kecepatan.webp" id="1_tq3ax"]
+[ext_resource type="FontFile" uid="uid://c1d4le37qq52t" path="res://src/font/DeliusUnicase-Bold.ttf" id="3_1vv1u"]
+[ext_resource type="Texture2D" uid="uid://0r8emjmq454k" path="res://src/img/ui/darah2.webp" id="3_mguni"]
+[ext_resource type="Texture2D" uid="uid://d5oj86hjvjgk" path="res://src/img/ui/max darah.png" id="4_myxlr"]
+[ext_resource type="Texture2D" uid="uid://wyr1k73rh6lu" path="res://src/img/ui/tombol_X.png" id="6_hli3h"]
+[ext_resource type="Texture2D" uid="uid://dbgdiu1e60jph" path="res://src/img/ui/tombol_X2.png" id="7_bu4iv"]
+[ext_resource type="PackedScene" uid="uid://cxe522wktat80" path="res://scene/petiKoin.tscn" id="8_bu4iv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq3ax"]
+bg_color = Color(0.2679026, 0.31844595, 0.49734366, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.19607843, 0.19607843, 0.19607843, 0.6)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wj761"]
+bg_color = Color(0.53333336, 0.5529412, 0.654902, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.5649616, 0.5649617, 0.5649613, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1g8jm"]
+bg_color = Color(0.95686275, 0.62352943, 0.039215688, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myxlr"]
+bg_color = Color(0.9764706, 0.22352941, 0.2627451, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hli3h"]
+bg_color = Color(1, 0.75686276, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4varo"]
+bg_color = Color(0.7647059, 0.25882354, 0.24705882, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5bnsq"]
+bg_color = Color(0.7647059, 0.25882354, 0.24705882, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 7
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wj761"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1vv1u"]
+texture = ExtResource("6_hli3h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4varo"]
+texture = ExtResource("7_bu4iv")
+
+[sub_resource type="InputEventKey" id="InputEventKey_jkbe5"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_5bnsq"]
+events = [SubResource("InputEventKey_jkbe5")]
+
+[sub_resource type="Animation" id="Animation_8et3e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/PanelContainer/kecepatan:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/PanelContainer/darah:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/PanelContainer/max darah:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/PanelContainer/close:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/PanelContainer/close:scale:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.4, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/PanelContainer/close:scale:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.4, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/PanelContainer/close:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(6.2831855, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_wj761"]
+resource_name = "opening"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/PanelContainer:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.1, 0, 0, 0.16666667, 0.15, 1.4, -0.08419193, -0.07577274, 0.08247474, 0.074227266, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.46666667)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/PanelContainer:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.1, 0, 0, 0.16666667, 0.15, 1.4, -0.08419193, -0.07577274, 0.08247474, 0.074227266, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.46666667)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/PanelContainer/kecepatan:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/PanelContainer/darah:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/PanelContainer/max darah:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/PanelContainer/close:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.46666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/PanelContainer/close:scale:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0.4, -0.25, 0, 0.25, 0, 1, -0.005550002, -0.10000001, 0, 0),
+"times": PackedFloat32Array(0.4667, 0.5)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/PanelContainer/close:scale:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(0.4, -0.25, 0, 0.25, 0, 1, -0.005550002, -0.10000001, 0, 0),
+"times": PackedFloat32Array(0.4667, 0.5)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/PanelContainer/close:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-6.2831855, 0, 0, 0.005550002, 2.0943952),
+"times": PackedFloat32Array(0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l278m"]
+_data = {
+&"RESET": SubResource("Animation_8et3e"),
+&"opening": SubResource("Animation_wj761")
+}
+
+[node name="store" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_myxlr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="Panel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -343.049
+offset_top = -196.49951
+offset_right = 313.049
+offset_bottom = 146.49948
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(328.05, 166.5)
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_tq3ax")
+
+[node name="kecepatan" type="PanelContainer" parent="CanvasLayer/PanelContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.0
+offset_top = -117.5
+offset_right = -143.0
+offset_bottom = 137.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wj761")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/PanelContainer/kecepatan"]
+position = Vector2(83.000015, 80)
+scale = Vector2(0.4375, 0.4375)
+texture = ExtResource("1_tq3ax")
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/kecepatan/Sprite2D"]
+anchors_preset = -1
+anchor_top = 1.098493
+anchor_right = 1.0
+anchor_bottom = 1.5086492
+offset_left = -128.0
+offset_top = -125.714264
+offset_right = -128.0
+offset_bottom = -125.714264
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1vv1u")
+theme_override_font_sizes/font_size = 37
+text = "KECEPATAN
++10"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="kecepatanBtn" type="Button" parent="CanvasLayer/PanelContainer/kecepatan"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_24njt")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxFlat_1g8jm")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_1g8jm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_myxlr")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_myxlr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hli3h")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_hli3h")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_myxlr")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_myxlr")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4varo")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_5bnsq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wj761")
+text = "KECEPATAN"
+
+[node name="darah" type="PanelContainer" parent="CanvasLayer/PanelContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = -117.5
+offset_right = 82.5
+offset_bottom = 137.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wj761")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/PanelContainer/darah"]
+position = Vector2(83, 80)
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("3_mguni")
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/darah/Sprite2D"]
+anchors_preset = -1
+anchor_top = 1.098493
+anchor_right = 1.0
+anchor_bottom = 1.5086492
+offset_left = -128.0
+offset_top = -142.89362
+offset_right = -128.0
+offset_bottom = -142.89362
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1vv1u")
+theme_override_font_sizes/font_size = 37
+text = "DARAH
++20"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="darahBtn" type="Button" parent="CanvasLayer/PanelContainer/darah"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_24njt")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxFlat_1g8jm")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_1g8jm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_myxlr")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_myxlr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hli3h")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_hli3h")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_myxlr")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_myxlr")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4varo")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_5bnsq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wj761")
+text = "darah"
+
+[node name="max darah" type="PanelContainer" parent="CanvasLayer/PanelContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 137.0
+offset_top = -117.5
+offset_right = 302.0
+offset_bottom = 137.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_wj761")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/PanelContainer/max darah"]
+position = Vector2(83, 80)
+scale = Vector2(0.218, 0.218)
+texture = ExtResource("4_myxlr")
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/max darah/Sprite2D"]
+anchors_preset = -1
+anchor_top = 1.098493
+anchor_right = 1.0
+anchor_bottom = 1.5086492
+offset_left = -261.46875
+offset_top = -261.96967
+offset_right = -251.46875
+offset_bottom = -246.96967
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_1vv1u")
+theme_override_font_sizes/font_size = 81
+text = "MAX DARAH
++10"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="maxDarahBtn" type="Button" parent="CanvasLayer/PanelContainer/max darah"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_24njt")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxFlat_1g8jm")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_1g8jm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_myxlr")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_myxlr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hli3h")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_hli3h")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_myxlr")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_myxlr")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4varo")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_5bnsq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wj761")
+text = "max darah"
+
+[node name="close" type="Button" parent="CanvasLayer/PanelContainer"]
+visible = false
+layout_mode = 0
+offset_left = 634.0492
+offset_top = -13.500626
+offset_right = 704.0492
+offset_bottom = 56.499374
+rotation = 6.2831855
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(35, 35)
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_1vv1u")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_1vv1u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4varo")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_4varo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4varo")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_4varo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_4varo")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_4varo")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_4varo")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_4varo")
+theme_override_styles/focus = SubResource("StyleBoxTexture_4varo")
+shortcut = SubResource("Shortcut_5bnsq")
+
+[node name="PanelContainer" parent="CanvasLayer/PanelContainer" instance=ExtResource("8_bu4iv")]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.019888813
+anchor_top = -0.10641573
+anchor_right = 0.19669166
+anchor_bottom = 0.010202688
+offset_right = 0.0
+offset_bottom = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_l278m")
+}
+
+[connection signal="pressed" from="CanvasLayer/PanelContainer/kecepatan/kecepatanBtn" to="." method="_on_kecepatan_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/darah/darahBtn" to="." method="_on_darah_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/max darah/maxDarahBtn" to="." method="_on_max_darah_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/close" to="." method="_on_close_pressed"]

@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://7rbsx2e82lp2"]
+
+[ext_resource type="Script" uid="uid://4eoeox8r6u0v" path="res://script/zonaPemulihan.gd" id="1_4on5c"]
+[ext_resource type="FontFile" uid="uid://daglmw3nvfi7p" path="res://src/font/Pixel Game Font.otf" id="2_o4uu0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4fyg"]
+bg_color = Color(0.17628574, 0.721508, 7.70092e-07, 1)
+border_width_left = 25
+border_width_top = 25
+border_width_right = 25
+border_width_bottom = 25
+border_color = Color(0.93333334, 0.3882353, 0.32156864, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6qfd"]
+size = Vector2(443, 269)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2v5tm"]
+size = Vector2(443, 269)
+
+[node name="zonaAman" type="Node2D"]
+script = ExtResource("1_4on5c")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 440.0
+offset_bottom = 268.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y4fyg")
+
+[node name="Label" type="Label" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/line_spacing = 1
+theme_override_fonts/font = ExtResource("2_o4uu0")
+theme_override_font_sizes/font_size = 77
+text = "ZONA AMAN"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(219.5, 133.5)
+shape = SubResource("RectangleShape2D_p6qfd")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 256
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(219, 134)
+shape = SubResource("RectangleShape2D_2v5tm")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

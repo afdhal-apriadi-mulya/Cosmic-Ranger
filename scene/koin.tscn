@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://busljba7bh4q6"]
+
+[ext_resource type="Script" uid="uid://de5k8pjjlabr1" path="res://script/koin.gd" id="1_8vpru"]
+[ext_resource type="Texture2D" uid="uid://bv5poqt3rcn3c" path="res://src/img/item/MonedaD.png" id="1_keu4n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vudky"]
+radius = 2.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vpru"]
+atlas = ExtResource("1_keu4n")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vudky"]
+atlas = ExtResource("1_keu4n")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tl7u7"]
+atlas = ExtResource("1_keu4n")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5e3e"]
+atlas = ExtResource("1_keu4n")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yj8mf"]
+atlas = ExtResource("1_keu4n")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4cadl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vpru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vudky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tl7u7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5e3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yj8mf")
+}],
+"loop": true,
+"name": &"koin",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tl7u7"]
+radius = 8.062258
+
+[node name="koin" type="Node2D" groups=["koinEmas"]]
+scale = Vector2(2.385, 2.385)
+script = ExtResource("1_8vpru")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["koinEmas"]]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_vudky")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_4cadl")
+animation = &"koin"
+autoplay = "koin"
+frame_progress = 0.038168658
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D" groups=["koinEmas"]]
+collision_layer = 320
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+shape = SubResource("CircleShape2D_tl7u7")
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="." method="_on_area_2d_body_entered"]

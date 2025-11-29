@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=3 uid="uid://cxe522wktat80"]
+
+[ext_resource type="Texture2D" uid="uid://cre3kewjdbxvj" path="res://src/img/item/chest.png" id="1_2d71n"]
+[ext_resource type="Script" uid="uid://7vj2hq1vhgtv" path="res://script/peti_koin.gd" id="1_xlng6"]
+[ext_resource type="FontFile" uid="uid://daglmw3nvfi7p" path="res://src/font/Pixel Game Font.otf" id="3_jjki4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlng6"]
+bg_color = Color(1.4525887, 1.0948616, 0.21415322, 0.27100003)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_color = Color(0.48570347, 0.48570353, 0.48570347, 0.6)
+shadow_size = 3
+
+[sub_resource type="Gradient" id="Gradient_jjki4"]
+offsets = PackedFloat32Array(0.27333334, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x4ok4"]
+gradient = SubResource("Gradient_jjki4")
+width = 124
+fill = 1
+fill_from = Vector2(0.19158879, 0.47984812)
+fill_to = Vector2(0.58878505, 0.588493)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jjki4"]
+radius = 17.029387
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x4ok4"]
+content_margin_right = 4.0
+
+[node name="PanelContainer" type="PanelContainer" groups=["koinEmas"]]
+offset_right = 116.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xlng6")
+script = ExtResource("1_xlng6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["koin"]]
+visible = false
+texture_filter = 1
+position = Vector2(26.375, 21.875002)
+scale = Vector2(0.45250002, 0.3825)
+texture = ExtResource("1_2d71n")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(58, 20.499998)
+scale = Vector2(0.90322584, 0.57812494)
+color = Color(0.51718444, 0.5171845, 0.51718444, 1)
+energy = 0.5
+texture = SubResource("GradientTexture2D_x4ok4")
+
+[node name="Area2D" type="Area2D" parent="." groups=["koinEmas"]]
+collision_layer = 8
+collision_mask = 320
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["koinEmas"]]
+position = Vector2(27, 21)
+shape = SubResource("CircleShape2D_jjki4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" groups=["koin"]]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_2d71n")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_jjki4")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x4ok4")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 2
