@@ -11,6 +11,8 @@ func _ready() -> void:
 	elif (dataBase.characterTerpilih == dataBase.namaPlayer[2]):
 		character = player2.instantiate()
 	
+	dataBase.kill = 0
+	
 	add_child(character)
 	character.global_position = Vector2(123.0, 154.0)
 	

@@ -34,4 +34,4 @@ func teksNotif():
 
 
 func tampilanData():
-	label_statsData.text = " STATUS: \n=> Nyawa: " + str(dataBase.nyawa_P1) + "\n=> MAX Nyawa: " + str(dataBase.max_nyawa_P1) + "\n=> Kecepatan: " + str(dataBase.kecepatanPlayer) + "\n=> Senjata: " + dataBase.senjataSaatIni + "\n=> is_kebal: " + str(dataBase.player_kebal) + "\n=> kill: " + str(dataBase.kill) + "\n=> is_dead: " + str(dataBase.player_dead) + "\n=> Karakter: " + dataBase.characterTerpilih + "\n=> is_in_game: " + str(dataBase.is_in_Game) + "\n=> Mode: " + str(dataBase.mode) 
+	label_statsData.text = " STATUS: \n=> Nyawa: " + str(dataBase.nyawa_P1) + "\n=> MAX Nyawa: " + str(dataBase.max_nyawa_P1) + "\n=> Kecepatan: " + str(dataBase.kecepatanPlayer) + "\n=> Senjata: " + dataBase.senjataSaatIni + "\n=> is_kebal: " + str(dataBase.player_kebal) + "\n=> kill: " + str(dataBase.kill) + "\n=> totalMusuh: " + str(dataBase.totalMusuh) +"\n=> is_dead: " + str(dataBase.player_dead) + "\n=> Karakter: " + dataBase.characterTerpilih + "\n=> is_in_game: " + str(dataBase.is_in_Game) + "\n=> Mode: " + str(dataBase.mode) 
